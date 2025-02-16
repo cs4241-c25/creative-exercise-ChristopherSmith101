@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightslategrey;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+    background-color: bisque;
+    display: inline-block;
+}
+
+.shapes-container {
+    width: 100%;
+    text-align: center;
+}
+
+.shapes {
+    display: inline-block;
+    background-color: bisque;
+    text-align: left;
+}
