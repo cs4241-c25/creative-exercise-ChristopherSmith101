@@ -15,11 +15,49 @@
 
 <div class="shapes-container">
     <div class="shapes">
-        <h1>HTML5 Empty Canvas</h1>
+        <h1>World of colors and shapes</h1>
 
         <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;">
             Sorry, your browser does not support canvas.
         </canvas>
+
+        <script>
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#1f6dba';
+            ctx.fillRect(100, 100, 50, 100);
+
+            const grad=ctx.createLinearGradient(0,0,280,0);
+            grad.addColorStop(0, "lightblue");
+            grad.addColorStop(1, "darkblue");
+
+            ctx.font = '20px sans-serif';
+            ctx.fillStyle = grad;
+            ctx.fillText("Hello World",10,50);
+
+            // Define a rectangle
+            ctx.moveTo(500,120);
+            ctx.lineTo(660,120);
+            ctx.lineTo(660,200);
+            ctx.lineTo(500,200);
+            ctx.lineTo(500,120);
+            ctx.fillRect(500, 120, 160, 80);
+
+            // Define a triangle
+            ctx.lineTo(580,40);
+            ctx.lineTo(660,120);
+            ctx.moveTo(500,120);
+            ctx.lineTo(580,40);
+
+
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(95, 400, 40, 0, 2 * Math.PI);
+            ctx.fillStyle = "red";
+            ctx.fill();
+        </script>
     </div>
 </div>
 
